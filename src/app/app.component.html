@@ -1,0 +1,13 @@
+<input type ="text" (keyup) ="onSearch($event)"/>
+<button>search</button>
+
+<div [formGroup]="form">
+  <input type = "text" formControlName="searchData" />
+</div>
+
+<div *ngFor="let item of list; trackBy:tracksBy">
+  <div *ngFor="let element of item.items" >
+    {{element.volumeInfo.title}}
+  </div>
+  <!-- {{item.items[0].volumeInfo.title}} -->
+</div>
